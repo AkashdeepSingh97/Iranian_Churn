@@ -1,11 +1,11 @@
 # Iranian_Churn
-Objective
+# Objective
           The goal of this project is to predict customer churn in an Iranian telecom dataset using machine learning models. By identifying customers likely to churn (leave the service), businesses can implement retention strategies. The dataset contains 3150 customer records with 14 features (all int64), including Call Failure, Complains, Customer Value, and Churn (target: 0 for non-churn, 1 for churn).
-Dataset
+# Dataset
         Source:- UCI Machine Learning
         Features:- 13 Predicted and 1 Target
         Characteristics: All columns are int64. Categorical features (Age Group, Tariff Plan, Status, Complains) were one-hot encoded. No missing values.
-Methods
+# Methods
       Preprocessing:
                Encoding: One-hot encoded categorical features (Age Group, Tariff Plan, Status, Complains) to handle their int64 representation.
                Scaling: Applied MinMaxScaler to normalize numerical features.
@@ -18,9 +18,9 @@ Methods
             Evaluated models using Accuracy, Precision, Recall, F1 Score, and ROC AUC.
     Visualizations:
             Random Forest Tree: Visualized one tree from the Random Forest to show decision logic (e.g., Complains drives churn predictions).
-            Confusion Matrices: Created for Random Forest and XGBoost to analyze true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN).
+            Confusion Matrices: Created for Random Forest and XGBoost to analyze true positives (TP), true negatives (TN), false positives (FP), and false      negatives (FN).
             Performance Chart: Bar chart comparing model metrics with values displayed.
-Results
+# Results
        Model Performance(Test_set):
            Model                   Accuracy     Precision      Recall      F1-Score      ROC-AUC
            Logistic Regression    0.880414      0.863063       0.903774    0.882949      0.880458
@@ -31,7 +31,7 @@ Results
           XGBoost slightly outperformed Random Forest (F1 Score: 0.981), but Random Forest was preferred for its balance of performance and explainability.
           Confusion matrices show low false negatives for both models, ensuring most churners are identified (critical for retention).
           Features like Complains and Customer Value were key predictors, as seen in Random Forest tree splits.
-Visualizations
+# Visualizations
       Random Forest Tree (images/Decision_Tree_Random_Forest.png): Shows decision logic (e.g., high Complains predicts churn).
       Confusion Matrices:
               Random Forest (images/rf_confusion_matrix.png): High TP, low FN.
